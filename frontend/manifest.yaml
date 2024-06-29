@@ -97,7 +97,7 @@ apiVersion: apps/v1
 metadata:
   name: frontend
   namespace: expense
-  #these labels are deployment related labels
+  # these labels are deployment related labels
   labels:
     component: frontend
     project: expense
@@ -109,7 +109,7 @@ spec:
       component: frontend
       project: expense
       tier: web
-  #pod definition
+  # pod definition
   template:
     metadata:
       labels:
@@ -120,7 +120,7 @@ spec:
       containers:
       - name: frontend
         image: neelareddy/frontend:v1.0.0
-        volumeMount:
+        volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
