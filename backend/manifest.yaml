@@ -50,6 +50,6 @@ spec:
     project: expense
     tier: app
   ports: 
-  - protocal: TCP
+  - protocol: TCP
     ports: 8080 #service-port
     targetPort: 3306 #target-port
