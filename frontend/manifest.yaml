@@ -120,7 +120,7 @@ spec:
       containers:
       - name: frontend
         image: neelareddy/frontend:v1.0.0
-        voiumeMount:
+        volumeMount:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
@@ -128,13 +128,13 @@ spec:
         # envFrom:
         # - configMapRef:
         #     name: frontend
-        volumes:
-        - name: nginx-conf
-          configMap:
-            name: frontend
-            items:
-            - key: nginx.conf
-              path: nginx.conf
+      volumes:
+      - name: nginx-conf
+        configMap:
+          name: frontend
+          items:
+          - key: nginx.conf
+            path: nginx.conf
 
 ---       
 apiVersion: v1
