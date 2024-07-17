@@ -32,10 +32,10 @@ spec:
         tier: app
     spec:
       initContainers:
-  - name: init-myservice
-    image: busybox:1.28
-    command: ['sh', '-c', "until nslookup mysql; do echo waiting for mysql; sleep 2; done"]
-      containers:
+      - name: init-myservice
+        image: busybox:1.28
+        command: ['sh', '-c', "until nslookup mysql; do echo waiting for mysql; sleep 2; done"]
+          containers:
       - name: backend
         image: neelareddy/backend:v1.0.0
         resources:
