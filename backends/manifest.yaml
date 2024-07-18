@@ -23,7 +23,7 @@ spec:
       component: backend
       project: expense
       tier: app
-    #pod definition
+  # pod definition
   template:
     metadata:
       labels:
