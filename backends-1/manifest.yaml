@@ -33,9 +33,9 @@ spec:
         tier: app
     spec:
       initContainers:
-  - name: init-myservice
-    image: busybox:1.28
-    command: ['sh', '-c', "until nslookup db-dev.neelareddy.store; do echo waiting for mysql; sleep 2; done"]
+      - name: init-myservice
+        image: busybox:1.28
+        command: ['sh', '-c', "until nslookup db-dev.neelareddy.store; do echo waiting for mysql; sleep 2; done"]
       containers:
       - name: backend
         image: neelareddy/backend:v1.0.0
